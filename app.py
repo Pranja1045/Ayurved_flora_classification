@@ -9,7 +9,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
 # Path to the model file
-MODEL_PATH = 'D:/python_programming/Ayurved_image_classification/models/my_model_ResNet.h5'
+MODEL_PATH = 'D:/models/my_model_ResNet.h5'
 model = load_model(MODEL_PATH)
 
 # Define class names (make sure this matches your model's class names)
@@ -24,7 +24,7 @@ class_names = ['Aloevera-Aloe barbadensis', 'Amaranthus Green_Amaranthus viridis
                'Ekka-Calotropis gigantea', 'Eucalyptus-Eucalyptus spp. (Genus)', 'False Amarnath_Digera muricata', 'Fenugreek Leaves_ Trigonella foenum-graecum']
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'D:/python_programming/Ayurved_image_classification/uploads'
+app.config['UPLOAD_FOLDER'] = 'D:/Ayurved_image_classification/uploads'
 CORS(app, resources={r"/classify": {"origins": "http://localhost:5173"}})
 
 def process_image(image_path):

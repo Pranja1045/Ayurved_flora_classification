@@ -5,7 +5,7 @@ import numpy as np
 import cv2
 
 # Path to the model file
-MODEL_PATH = 'D:/python_programming/Ayurved_image_classification/models/my_model_ResNet.h5'
+MODEL_PATH = 'D:/models/my_model_ResNet.h5'
 # Load the model
 model = load_model(MODEL_PATH)
 class_names = ['Aloevera-Aloe barbadensis', 'Amaranthus Green_Amaranthus viridis', 'Amaranthus Red_Amaranthus tricolor', 'Amla-Phyllanthus emlica Linn', 'Amruta Balli-Tinospora cordifolia', 
@@ -35,4 +35,4 @@ def test_model_prediction(image_path,class_names):
     print(len(class_names))
     return class_names[class_id]
 
-print(test_model_prediction('D:/python_programming/Ayurved_image_classification/uploads/crown_flower.jpeg',class_names))
+print(test_model_prediction('D:/Ayurved_image_classification/uploads/crown_flower.jpeg',class_names))
