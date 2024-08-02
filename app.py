@@ -9,7 +9,8 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
 # Path to the model file
-MODEL_PATH = 'D:/models/my_model_ResNet.h5'
+##D:/Ayurved_image_classification/models/my_model_ResNet.h5
+MODEL_PATH = ''
 model = load_model(MODEL_PATH)
 
 # Define class names (make sure this matches your model's class names)
@@ -43,7 +44,7 @@ def classify_image(image_array, class_names):
     confidence = np.max(prediction)
     class_id = np.argmax(prediction)
     print(f"Confidence: {confidence},ON: {class_names[class_id]}")  # Debugging output
-    if confidence < 0.80:
+    if confidence < 0.50:
         return "Unknown"
     else:
         return class_names[class_id]  # Return the label of the top prediction
