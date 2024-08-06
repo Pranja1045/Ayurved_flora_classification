@@ -9,8 +9,8 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
 # Path to the model file
-##D:/Ayurved_image_classification/models/my_model_ResNet.h5
-MODEL_PATH = ''
+##
+MODEL_PATH = 'D:/models/my_model_ResNet.h5'
 model = load_model(MODEL_PATH)
 
 # Define class names (make sure this matches your model's class names)
