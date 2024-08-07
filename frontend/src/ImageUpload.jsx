@@ -44,6 +44,8 @@ function ImageUpload() {
         setClassificationResult(response.data.class);
         const chatResponse = await getGroqChatCompletion(response.data.class);
         const chatContent = chatResponse.choices[0]?.message?.content || "";
+        console.log(chatContent);
+
         setChatCompletionResult(ReadableResponse(chatContent));
         setError("");
       }
